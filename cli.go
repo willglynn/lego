@@ -86,10 +86,10 @@ func main() {
 			Name:  "email, m",
 			Usage: "Email used for registration and recovery contact.",
 		},
-		cli.IntFlag{
-			Name:  "rsa-key-size, B",
-			Value: 2048,
-			Usage: "Size of the RSA key.",
+		cli.StringFlag{
+			Name:  "key-type, k",
+			Value: "rsa2048",
+			Usage: "Key type to use for private keys. Supported: rsa2048, rsa4096, rsa8192, ec256, ec384",
 		},
 		cli.StringFlag{
 			Name:  "path",
